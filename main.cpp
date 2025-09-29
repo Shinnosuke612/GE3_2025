@@ -1434,7 +1434,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		commandList->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 		// 描画！（DrawCall／ドローコール）。3頂点で1つのインスタンス。インスタンスについては今後
-		commandList->DrawInstanced(modelData.vertices.size(), 1, 0, 0);
+		commandList->DrawInstanced(UINT(modelData.vertices.size()), 1, 0, 0);
 
 		//Spriteの描画。変更が必要なものだけ変更する
 		commandList->IASetVertexBuffers(0, 1, &vertexBufferViewSprite); // VBVを設定
